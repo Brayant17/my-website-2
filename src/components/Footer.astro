@@ -1,0 +1,50 @@
+---
+// Footer.astro - Footer Premium
+---
+
+<footer class="w-full border-t border-white/5 bg-[#0D0D11]/90 py-12 relative z-20">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+    
+    <!-- Left: Credits -->
+    <div class="text-center md:text-left">
+      <span class="text-lg font-bold tracking-tight text-white font-heading block mb-1">
+        Brayant<span class="text-blue-300 font-extrabold">.F</span>
+      </span>
+      <p class="text-xs text-zinc-500 font-light font-heading">
+        Diseñado & Desarrollado por Brayant Flores © 2026. Todos los derechos reservados.
+      </p>
+    </div>
+
+    <!-- Center: Availability Status (Premium ping animation) -->
+    <div class="flex items-center gap-2 rounded-full bg-emerald-500/5 border border-emerald-500/10 px-4 py-1.5 shadow-lg">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+      </span>
+      <span class="text-[10px] font-mono font-semibold uppercase tracking-wider text-emerald-400">
+        Disponible para proyectos
+      </span>
+    </div>
+
+    <!-- Right: Social Links -->
+    <div class="flex gap-6 items-center">
+      <a
+        href="https://www.instagram.com/brayan_tsj/"
+        target="_blank"
+        class="text-xs font-heading font-semibold text-zinc-400 hover:text-white transition-colors duration-300 relative py-1 group"
+      >
+        Instagram
+        <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
+      </a>
+      <a
+        href="https://www.linkedin.com/in/brayant-flores/"
+        target="_blank"
+        class="text-xs font-heading font-semibold text-zinc-400 hover:text-white transition-colors duration-300 relative py-1 group"
+      >
+        LinkedIn
+        <span class="absolute bottom-0 left-0 w-0 h-[1px] bg-white group-hover:w-full transition-all duration-300"></span>
+      </a>
+    </div>
+
+  </div>
+</footer>

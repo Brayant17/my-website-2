@@ -1,0 +1,108 @@
+---
+// Proyecto.astro - Tarjeta de Proyecto Premium
+const { image, title, link, text, titleWebSite, tags = "", number = "01" } = Astro.props;
+---
+
+<article
+  class="group relative flex flex-col h-full bg-[#121217]/40 border border-white/5 hover:border-white/20 rounded-3xl overflow-hidden shadow-2xl transition-all duration-500 text-left"
+>
+  <!-- Ambient glow in hover -->
+  <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-gradient-to-tr from-blue-500/5 to-purple-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+
+  <!-- Image Area -->
+  <a
+    href={link}
+    target="_blank"
+    class="block w-full overflow-hidden border-b border-white/5 relative aspect-video"
+  >
+    <div
+      class="absolute inset-0 bg-[#0D0D11]/30 group-hover:bg-transparent transition-colors duration-500 z-10"
+    ></div>
+    <img
+      src={image}
+      alt={`${titleWebSite} - ${title}`}
+      class="w-full h-full object-cover transform scale-100 group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+    />
+    
+    <!-- Arrow Icon Top Right -->
+    <div
+      class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-black/60 backdrop-blur-md border border-white/10 flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-lg"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="transform group-hover:rotate-45 transition-transform duration-300"
+      >
+        <line x1="7" y1="17" x2="17" y2="7"></line>
+        <polyline points="7 7 17 7 17 17"></polyline>
+      </svg>
+    </div>
+  </a>
+
+  <!-- Content Area -->
+  <div class="p-6 md:p-8 flex flex-col flex-grow relative z-20">
+    <!-- Tags List -->
+    {tags && (
+      <div class="flex flex-wrap gap-1.5 mb-4">
+        {tags.split(",").map((tag: string) => (
+          <span class="text-[9px] font-semibold font-heading tracking-wider uppercase text-blue-300 bg-blue-500/10 border border-blue-500/10 px-2.5 py-0.5 rounded-full">
+            {tag.trim()}
+          </span>
+        ))}
+      </div>
+    )}
+
+    <div class="mb-4">
+      <h3
+        class="text-2xl font-bold font-heading text-white group-hover:text-zinc-200 transition-colors"
+      >
+        {titleWebSite}
+      </h3>
+      <span
+        class="text-xs font-mono text-zinc-500 uppercase tracking-widest mt-1 block"
+      >
+        {title}
+      </span>
+    </div>
+
+    <p class="text-zinc-400 text-sm font-light leading-relaxed mb-6">
+      {text}
+    </p>
+
+    <!-- Bottom Action -->
+    <div
+      class="mt-auto pt-5 border-t border-white/5 flex justify-between items-center group/btn"
+    >
+      <a
+        href={link}
+        target="_blank"
+        class="text-sm font-heading font-semibold text-zinc-300 group-hover/btn:text-white transition-colors flex items-center gap-1.5"
+      >
+        Ver Proyecto
+        <span
+          class="transform group-hover/btn:translate-x-1 transition-transform"
+          >→</span
+        >
+      </a>
+      <span class="text-zinc-600 text-xs font-mono">{number}</span>
+    </div>
+  </div>
+</article>
+
+<style>
+  /* Extra subtle shadow and border transition */
+  article {
+    transition: border-color 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  }
+  article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+</style>

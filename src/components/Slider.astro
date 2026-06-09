@@ -1,0 +1,114 @@
+---
+import wordpressLogo from "../assets/WordPress-Logo.png"
+import shopifyLogo from "../assets/shopifyLogo.png"
+import figmaLogo from "../assets/figmaLogo.avif"
+import framerLogo from "../assets/framerLogo.avif"
+import astroLogo from "../assets/AstroLogo.png" // Corregido capitalización de AstroLogo.png si es necesario
+import reactLogo from "../assets/React-icon.png"
+import tailwindLogo from "../assets/Tailwind_CSS_Logo.png"
+import elementorLogo from "../assets/ElementorLogo.png"
+---
+<div class="w-full m-auto pt-8">
+    <div class="slider-container [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)] [mask-repeat:no-repeat] [mask-size:100%_100%] overflow-hidden flex select-none">
+        
+        <!-- Track 1 -->
+        <div class="slider-track flex gap-10 pr-10 shrink-0">
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={wordpressLogo.src} alt="Wordpress" class="aspect-square object-contain" />
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={shopifyLogo.src} alt="Shopify" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={figmaLogo.src} alt="Figma" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={framerLogo.src} alt="Framer" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={astroLogo.src} alt="Astro" class="aspect-square object-contain invert-100 opacity-80 hover:opacity-100 transition-opacity"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={reactLogo.src} alt="React" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={elementorLogo.src} alt="Elementor" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={tailwindLogo.src} alt="Tailwind CSS" class="aspect-square object-contain"/>
+            </div>
+        </div>
+
+        <!-- Track 2 (Identical Duplicate for Seamless Loop) -->
+        <div class="slider-track flex gap-10 pr-10 shrink-0" aria-hidden="true">
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={wordpressLogo.src} alt="Wordpress" class="aspect-square object-contain" />
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={shopifyLogo.src} alt="Shopify" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={figmaLogo.src} alt="Figma" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={framerLogo.src} alt="Framer" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={astroLogo.src} alt="Astro" class="aspect-square object-contain invert-100 opacity-80 hover:opacity-100 transition-opacity"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={reactLogo.src} alt="React" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={elementorLogo.src} alt="Elementor" class="aspect-square object-contain"/>
+            </div>
+            <div class="slider-item bg-[#121217] border border-white/5 rounded-2xl flex items-center justify-center">
+                <img src={tailwindLogo.src} alt="Tailwind CSS" class="aspect-square object-contain"/>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+    .slider-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .slider-track {
+        animation: marquee-scroll 30s linear infinite;
+    }
+
+    .slider-item {
+        padding: 15px;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .slider-item:hover {
+        transform: translateY(-2px);
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .slider-item img {
+        width: 100%;
+        height: 100%;
+    }
+
+    @keyframes marquee-scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+
+    /* Pause scrolling on hover */
+    .slider-container:hover .slider-track {
+        animation-play-state: paused;
+    }
+</style>

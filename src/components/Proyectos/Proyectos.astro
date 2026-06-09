@@ -1,0 +1,168 @@
+---
+// Proyectos.astro - Galería de Portafolio Editorial
+import readyPicture from "../../assets/687_1x_shots_so.png";
+import yullHomePicture from "../../assets/729shots_so.png";
+import Proyecto from "./Proyecto.astro";
+import bodegaNetoPicture from "../../assets/portada-bodega-neto.png";
+import intactoBrand from "../../assets/610_1x_shots_so.png";
+import regioRentas from "../../assets/604shots_so.png";
+---
+
+<section class="py-32 relative w-full border-t border-zinc-800 bg-[#0D0D11]" id="proyectos">
+  <!-- Glowing backlights -->
+  <div class="absolute top-[40%] left-[5%] w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+  <div class="absolute bottom-[10%] right-[5%] w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] -z-10 animate-pulse" style="animation-delay: 1.5s;"></div>
+
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Header (Technical/Minimal Editorial) -->
+    <div
+      class="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-6 project-header opacity-0 translate-y-4"
+    >
+      <div>
+        <span
+          class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-2"
+        >
+          [03] — Proyectos Seleccionados
+        </span>
+        <h2
+          class="text-4xl md:text-5xl font-bold font-heading text-white tracking-tight"
+        >
+          Trabajo Destacado.
+        </h2>
+      </div>
+      <p
+        class="text-zinc-400 max-w-sm text-sm font-light leading-relaxed md:text-left"
+      >
+        Una colección meticulosa de desarrollos web reales enfocados en diseño visual excepcional, rendimiento técnico impecable y resultados de negocio.
+      </p>
+    </div>
+
+    <!-- Projects Grid - Editorial Card Style -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full">
+      
+      <!-- Proyecto 1: Regio Rentas -->
+      <div class="project-item opacity-0 translate-y-8 h-full">
+        <Proyecto
+          image={regioRentas.src}
+          title="Marketplace Inmobiliario"
+          link="https://regiorentas.mx/"
+          titleWebSite="Regio Rentas"
+          text="Plataforma robusta para conexión entre propietarios e inquilinos. Panel de administración avanzado, filtros avanzados y gestión de propiedades."
+          tags="Astro, Tailwind, JS, Custom Panel"
+          number="01"
+        />
+      </div>
+
+      <!-- Proyecto 2: Ready Your Style -->
+      <div class="project-item opacity-0 translate-y-8 h-full">
+        <Proyecto
+          image={readyPicture.src}
+          title="E-commerce Streetwear"
+          link="https://readyyourstyle.com/"
+          titleWebSite="Ready Your Style"
+          text="Tienda online con identidad urbana disruptiva. Experiencia de compra ultra fluida y optimizada para la venta de ropa y sneakers exclusivos."
+          tags="Shopify, Liquid, CSS3, Conversion"
+          number="02"
+        />
+      </div>
+
+      <!-- Proyecto 3: YullHome -->
+      <div class="project-item opacity-0 translate-y-8 h-full">
+        <Proyecto
+          image={yullHomePicture.src}
+          title="E-commerce Interiorismo"
+          link="https://yullhome.com/"
+          titleWebSite="YullHome"
+          text="E-commerce elegante para venta de muebles y decoración premium. Interfaz minimalista de alta gama que resalta los detalles de cada producto."
+          tags="Shopify, UX Design, Custom Liquid"
+          number="03"
+        />
+      </div>
+
+      <!-- Proyecto 4: La Bodega de Neto -->
+      <div class="project-item opacity-0 translate-y-8 h-full">
+        <Proyecto
+          image={bodegaNetoPicture.src}
+          title="Real Estate Catalog"
+          link="https://labodegadeneto.com.mx/"
+          titleWebSite="La Bodega de Neto"
+          text="Catálogo digital interactivo e inmobiliario optimizado para móviles. Visualización de lotes disponibles con carga ultrarrápida y alta conversión."
+          tags="WordPress, Elementor Pro, Responsive"
+          number="04"
+        />
+      </div>
+
+      <!-- Proyecto 5: IntactoBrand -->
+      <div class="project-item opacity-0 translate-y-8 h-full">
+        <Proyecto
+          image={intactoBrand.src}
+          title="E-commerce Gorras Premium"
+          link="https://intactobrand.com.mx/"
+          titleWebSite="IntactoBrand"
+          text="Tienda moderna y limpia de gorras exclusivas. Animaciones fluidas, integraciones de pago instantáneo y alto cuidado en la experiencia móvil."
+          tags="Shopify, Custom CSS, SEO, Analytics"
+          number="05"
+        />
+      </div>
+
+      <!-- Coming Soon Card -->
+      <div
+        class="project-item opacity-0 translate-y-8 flex flex-col items-center justify-center rounded-3xl border border-white/5 border-dashed bg-white/2 hover:border-white/20 transition-colors duration-500 p-8 min-h-[350px] text-center"
+      >
+        <div class="max-w-xs">
+          <span class="inline-block text-3xl mb-4 text-indigo-300 animate-pulse">✦</span>
+          <h4 class="text-white font-bold font-heading text-lg mb-2">Próximos Lanzamientos</h4>
+          <p class="text-zinc-500 text-xs font-light leading-relaxed">
+            Actualmente me encuentro desarrollando experiencias e-commerce e interfaces a medida que pronto se sumarán a este portafolio.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("astro:page-load", () => {
+    initProjects();
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initProjects();
+  });
+
+  function initProjects() {
+    // 1. Header Anim
+    gsap.to(".project-header", {
+      scrollTrigger: {
+        trigger: ".project-header",
+        start: "top 80%",
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    // 2. Grid Items Stagger
+    const items = document.querySelectorAll(".project-item");
+    if (items.length) {
+      gsap.to(items, {
+        scrollTrigger: {
+          trigger: items[0],
+          start: "top 85%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.12,
+        ease: "power3.out",
+      });
+    }
+  }
+</script>

@@ -1,0 +1,187 @@
+---
+// Servicios.astro - Servicios Premium
+import ecommercePicture from "../assets/ecommercePicture.jpeg";
+import webSite from "../assets/websitePicture.jpeg";
+import webApp from "../assets/webApp.jpeg";
+---
+
+<section class="py-32 relative z-10 border-t border-zinc-800 bg-[#0D0D11]" id="servicios">
+  <!-- Glowing lights for ambient feeling -->
+  <div class="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-blue-500/5 rounded-full blur-[100px] -z-10 animate-pulse"></div>
+  <div class="absolute bottom-[20%] right-[10%] w-[350px] h-[350px] bg-purple-500/5 rounded-full blur-[100px] -z-10 animate-pulse" style="animation-delay: 2.5s;"></div>
+
+  <div class="w-full max-w-6xl mx-auto px-6">
+    <!-- Section Header -->
+    <div class="mb-20 text-center service-header opacity-0 translate-y-4">
+      <span
+        class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-2"
+      >
+        [02] — Servicios
+      </span>
+      <h2
+        class="text-4xl md:text-5xl font-bold font-heading text-white mt-4 tracking-tight"
+      >
+        Soluciones Digitales <span class="bg-gradient-to-r from-blue-300 to-indigo-200 bg-clip-text text-transparent">a Medida.</span>
+      </h2>
+      <p class="text-zinc-400 max-w-xl mx-auto mt-4 text-sm md:text-base font-light leading-relaxed">
+        Diseño interfaces extraordinarias y desarrollo sistemas web de alto rendimiento optimizados para posicionamiento y conversión.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      
+      <!-- Service 1: Páginas Web -->
+      <article
+        class="service-card group relative overflow-hidden rounded-3xl bg-white/3 border border-white/5 p-6 hover:border-white/10 hover:bg-zinc-900/40 shadow-2xl transition-all duration-500 opacity-0 translate-y-8"
+        data-service-color="rgba(59, 130, 246, 0.25)"
+      >
+        <!-- Internal Glowing Mesh -->
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-all duration-500 -z-10"></div>
+        
+        <div class="relative h-48 mb-6 overflow-hidden rounded-2xl border border-white/5">
+          <div
+            class="absolute inset-0 bg-blue-900/20 group-hover:bg-transparent transition-colors duration-500 z-10"
+          ></div>
+          <img
+            src={webSite.src}
+            alt="Desarrollo de Páginas Web por Brayant Flores"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+          />
+        </div>
+        <h3
+          class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-blue-300 transition-colors"
+        >
+          Páginas Web
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed">
+          Sitios corporativos y portafolios ultrarrápidos que transmiten autoridad y confianza. Diseño responsivo de alta gama y optimizado para destacar tu marca desde el primer clic.
+        </p>
+      </article>
+
+      <!-- Service 2: E-Commerce -->
+      <article
+        class="service-card group relative overflow-hidden rounded-3xl bg-white/3 border border-white/5 p-6 hover:border-white/10 hover:bg-zinc-900/40 shadow-2xl transition-all duration-500 opacity-0 translate-y-8"
+        style="transition-delay: 150ms;"
+        data-service-color="rgba(168, 85, 247, 0.25)"
+      >
+        <!-- Internal Glowing Mesh -->
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-all duration-500 -z-10"></div>
+
+        <div class="relative h-48 mb-6 overflow-hidden rounded-2xl border border-white/5">
+          <div
+            class="absolute inset-0 bg-purple-900/20 group-hover:bg-transparent transition-colors duration-500 z-10"
+          ></div>
+          <img
+            src={ecommercePicture.src}
+            alt="Tiendas en Línea / E-Commerce por Brayant Flores"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+          />
+        </div>
+        <h3
+          class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-purple-300 transition-colors"
+        >
+          E-Commerce
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed">
+          Tiendas online seguras, rápidas y autoadministrables. Carritos de compra fluidos, integraciones de pasarelas de pago y todo lo necesario para vender tus productos 24/7.
+        </p>
+      </article>
+
+      <!-- Service 3: Web Apps -->
+      <article
+        class="service-card group relative overflow-hidden rounded-3xl bg-white/3 border border-white/5 p-6 hover:border-white/10 hover:bg-zinc-900/40 shadow-2xl transition-all duration-500 opacity-0 translate-y-8"
+        style="transition-delay: 300ms;"
+        data-service-color="rgba(99, 102, 241, 0.25)"
+      >
+        <!-- Internal Glowing Mesh -->
+        <div class="absolute -top-24 -left-24 w-48 h-48 bg-[#6366f1]/10 rounded-full blur-2xl group-hover:bg-[#6366f1]/20 transition-all duration-500 -z-10"></div>
+
+        <div class="relative h-48 mb-6 overflow-hidden rounded-2xl border border-white/5">
+          <div
+            class="absolute inset-0 bg-indigo-900/20 group-hover:bg-transparent transition-colors duration-500 z-10"
+          ></div>
+          <img
+            src={webApp.src}
+            alt="Aplicaciones Web personalizadas por Brayant Flores"
+            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700 ease-out grayscale group-hover:grayscale-0"
+          />
+        </div>
+        <h3
+          class="text-2xl font-bold font-heading text-white mb-3 group-hover:text-indigo-300 transition-colors"
+        >
+          Web Apps
+        </h3>
+        <p class="text-zinc-400 text-sm font-light leading-relaxed">
+          Sistemas web personalizados para gestionar tu negocio. Plataformas robustas, paneles de administración intuitivos y herramientas a medida que escalan al ritmo de tus necesidades.
+        </p>
+      </article>
+      
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Service Card Hover custom shadow glow */
+  .service-card {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, background-color 0.4s ease;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px var(--service-glow, rgba(255, 255, 255, 0.05));
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("astro:page-load", () => {
+    initServices();
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initServices();
+  });
+
+  function initServices() {
+    // 1. Inject custom glow colors
+    const cards = document.querySelectorAll(".service-card");
+    cards.forEach((card) => {
+      const color = card.getAttribute("data-glow-color") || card.getAttribute("data-service-color");
+      if (color) {
+        (card as HTMLElement).style.setProperty("--service-glow", color);
+      }
+    });
+
+    // 2. Header Animation
+    gsap.to(".service-header", {
+      scrollTrigger: {
+        trigger: ".service-header",
+        start: "top 80%",
+      },
+      y: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    // 3. Cards Animation
+    if (cards.length) {
+      gsap.to(cards, {
+        scrollTrigger: {
+          trigger: cards[0],
+          start: "top 85%",
+        },
+        y: 0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.15,
+        ease: "power3.out",
+      });
+    }
+  }
+</script>

@@ -1,0 +1,223 @@
+---
+// CTA.astro - Contact Section Premium
+---
+
+<section
+  id="contacto"
+  class="py-32 relative border-t border-zinc-800 bg-[#0D0D11] overflow-hidden"
+>
+  <!-- Background lighting -->
+  <div class="absolute top-[10%] left-[30%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[120px] -z-10 animate-pulse"></div>
+  <div class="absolute bottom-[10%] right-[20%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[120px] -z-10 animate-pulse" style="animation-delay: 1s;"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+      
+      <!-- Left Column: Story & Fast Info -->
+      <div class="lg:col-span-5 flex flex-col gap-8 contact-left opacity-0 -translate-x-8">
+        <div>
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-2">
+            [04] — Contacto
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold font-heading text-white leading-tight mb-6">
+            Hagamos realidad <br/>
+            <span class="bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300 bg-clip-text text-transparent">tu próximo proyecto.</span>
+          </h2>
+          <p class="text-zinc-400 text-sm md:text-base font-light leading-relaxed">
+            ¿Tienes una idea en mente, necesitas una tienda en línea de alta conversión o buscas mejorar la velocidad y el diseño de tu sitio web actual? Escríbeme y diseñemos juntos una solución digital premium.
+          </p>
+        </div>
+
+        <!-- Contact Quick Cards -->
+        <div class="flex flex-col gap-4">
+          <!-- Email Card -->
+          <a
+            href="mailto:contacto@brayantflores.com"
+            class="group flex items-center gap-4 rounded-2xl bg-white/3 border border-white/5 p-4 hover:border-white/15 hover:bg-white/5 transition-all duration-300 shadow-lg"
+          >
+            <div class="w-10 h-10 rounded-xl bg-blue-500/10 text-blue-300 flex items-center justify-center group-hover:bg-blue-500/20 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <div>
+              <span class="block text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Escríbeme por Correo</span>
+              <span class="text-sm font-semibold text-white group-hover:text-blue-300 transition-colors">contacto@brayantflores.com</span>
+            </div>
+          </a>
+
+          <!-- Instagram Card -->
+          <a
+            href="https://www.instagram.com/brayan_tsj/"
+            target="_blank"
+            class="group flex items-center gap-4 rounded-2xl bg-white/3 border border-white/5 p-4 hover:border-white/15 hover:bg-white/5 transition-all duration-300 shadow-lg"
+          >
+            <div class="w-10 h-10 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center group-hover:bg-pink-500/20 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </div>
+            <div>
+              <span class="block text-[10px] font-mono text-zinc-500 uppercase tracking-wider">Mensaje Directo</span>
+              <span class="text-sm font-semibold text-white group-hover:text-pink-300 transition-colors">@Brayan_tsj</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Form -->
+      <div class="lg:col-span-7 contact-right opacity-0 translate-x-8 w-full">
+        <div class="glassmorphism rounded-3xl p-8 md:p-10 shadow-2xl relative">
+          
+          <h3 class="text-2xl font-bold font-heading text-white mb-6">Enviar Mensaje</h3>
+          
+          <form id="contact-form" class="flex flex-col gap-6">
+            
+            <!-- Name Input -->
+            <div class="flex flex-col gap-2 relative">
+              <label for="name" class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Nombre Completo</label>
+              <input
+                type="text"
+                id="name"
+                required
+                placeholder="Ej. Juan Pérez"
+                class="w-full bg-white/2 border border-white/5 focus:border-blue-300/40 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-blue-300/20 transition-all duration-300"
+              />
+            </div>
+
+            <!-- Email Input -->
+            <div class="flex flex-col gap-2 relative">
+              <label for="email" class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Correo Electrónico</label>
+              <input
+                type="email"
+                id="email"
+                required
+                placeholder="juan@correo.com"
+                class="w-full bg-white/2 border border-white/5 focus:border-blue-300/40 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-blue-300/20 transition-all duration-300"
+              />
+            </div>
+
+            <!-- Message Input -->
+            <div class="flex flex-col gap-2 relative">
+              <label for="message" class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Mensaje</label>
+              <textarea
+                id="message"
+                required
+                rows="4"
+                placeholder="Cuéntame sobre tu proyecto..."
+                class="w-full bg-white/2 border border-white/5 focus:border-blue-300/40 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-blue-300/20 transition-all duration-300 resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit Button with states -->
+            <button
+              type="submit"
+              id="submit-btn"
+              class="w-full py-4 px-6 rounded-xl font-heading font-semibold text-sm bg-white text-black hover:bg-zinc-100 hover:scale-[1.01] active:scale-[0.99] transition-all duration-300 flex items-center justify-center gap-2 cursor-pointer shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.25)]"
+            >
+              <span id="btn-text">Enviar Mensaje</span>
+              <svg
+                id="btn-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="transform group-hover:translate-x-0.5 transition-transform"
+              >
+                <line x1="22" y1="2" x2="11" y2="13"></line>
+                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+              </svg>
+            </button>
+
+            <!-- Success Message banner (hidden by default) -->
+            <div
+              id="form-success"
+              class="hidden items-center gap-3 bg-emerald-500/10 border border-emerald-500/25 rounded-xl p-4 text-emerald-400 text-sm font-light leading-relaxed animate-fade-in"
+            >
+              <span class="text-lg">✓</span>
+              <span>¡Tu mensaje ha sido enviado! Me pondré en contacto contigo a la brevedad. Gracias por tu interés.</span>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("astro:page-load", () => {
+    initContact();
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initContact();
+  });
+
+  function initContact() {
+    // 1. Entrance scroll animations
+    gsap.to(".contact-left", {
+      scrollTrigger: {
+        trigger: "#contacto",
+        start: "top 80%",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    gsap.to(".contact-right", {
+      scrollTrigger: {
+        trigger: "#contacto",
+        start: "top 80%",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.15,
+    });
+
+    // 2. Interactive Form Submission State
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+    const btnText = document.getElementById("btn-text");
+    const btnIcon = document.getElementById("btn-icon");
+    const successBanner = document.getElementById("form-success");
+
+    if (form && submitBtn && btnText && btnIcon && successBanner) {
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        // 1. Sending State
+        submitBtn.disabled = true;
+        submitBtn.classList.add("opacity-50", "cursor-not-allowed");
+        btnText.textContent = "Enviando...";
+        gsap.to(btnIcon, { rotate: 360, repeat: -1, duration: 1, ease: "none" });
+
+        // 2. Simulate HTTP Request delay
+        setTimeout(() => {
+          // 3. Success State
+          gsap.killTweensOf(btnIcon);
+          submitBtn.classList.add("hidden");
+          successBanner.classList.remove("hidden");
+          successBanner.classList.add("flex");
+          
+          // Animate banner in
+          gsap.fromTo(successBanner, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 });
+          
+          form.reset();
+        }, 1500);
+      });
+    }
+  }
+</script>

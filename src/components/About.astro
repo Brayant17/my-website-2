@@ -1,0 +1,219 @@
+---
+// About.astro - Sección Sobre Mí
+---
+
+<section id="sobre-mi" class="py-32 relative overflow-hidden border-t border-zinc-800 bg-[#0D0D11]">
+  <!-- Glow background -->
+  <div class="absolute bottom-10 right-10 w-[300px] h-[300px] bg-purple-500/5 rounded-full blur-[100px] -z-10"></div>
+  <div class="absolute top-10 left-10 w-[300px] h-[300px] bg-blue-500/5 rounded-full blur-[100px] -z-10"></div>
+
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+      
+      <!-- Left Column: Portrait Card & Stats Grid -->
+      <div class="lg:col-span-5 flex flex-col gap-6 about-left opacity-0 -translate-x-8">
+        
+        <!-- Profile Card -->
+        <div class="group relative overflow-hidden rounded-3xl bg-white/5 border border-white/10 p-8 shadow-2xl backdrop-blur-md">
+          <!-- Ambient lighting inside card -->
+          <div class="absolute -top-24 -left-24 w-48 h-48 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-colors duration-500"></div>
+          <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-colors duration-500"></div>
+
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-4">[ Ficha Técnica ]</span>
+          <h3 class="text-3xl font-bold font-heading text-white mb-2">Brayant Flores</h3>
+          <p class="text-blue-300 font-mono text-xs mb-6 tracking-wider">DEVELOPER & DESIGNER</p>
+          
+          <ul class="flex flex-col gap-4 border-t border-white/5 pt-6 text-sm text-zinc-400 font-light">
+            <li class="flex justify-between"><span class="font-mono text-xs text-zinc-500">Ubicación</span> <span class="text-zinc-200">México / Remoto</span></li>
+            <li class="flex justify-between"><span class="font-mono text-xs text-zinc-500">Especialidad</span> <span class="text-zinc-200">Frontend & eCommerce</span></li>
+            <li class="flex justify-between"><span class="font-mono text-xs text-zinc-500">Disponibilidad</span> <span class="flex items-center gap-1.5 text-emerald-400 font-medium"><span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>Inmediata</span></li>
+          </ul>
+        </div>
+
+        <!-- Mini Stats Grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-5 text-center shadow-lg hover:border-white/20 transition-all duration-300">
+            <span class="block text-3xl font-extrabold font-heading text-white mb-1">4+</span>
+            <span class="text-xs text-zinc-500 uppercase font-semibold font-heading tracking-wider">Años Exp.</span>
+          </div>
+          <div class="rounded-2xl bg-white/5 border border-white/10 p-5 text-center shadow-lg hover:border-white/20 transition-all duration-300">
+            <span class="block text-3xl font-extrabold font-heading text-white mb-1">20+</span>
+            <span class="text-xs text-zinc-500 uppercase font-semibold font-heading tracking-wider">Proyectos</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Story & Interactive Tabs -->
+      <div class="lg:col-span-7 flex flex-col gap-8 about-right opacity-0 translate-x-8">
+        <div>
+          <span class="text-xs font-mono text-zinc-500 uppercase tracking-widest block mb-2">[01] — Sobre Mí</span>
+          <h2 class="text-4xl md:text-5xl font-bold font-heading text-white leading-tight mb-6">
+            Fusiono diseño y código <br/>
+            <span class="bg-gradient-to-r from-blue-300 via-indigo-200 to-purple-300 bg-clip-text text-transparent">para crear impacto.</span>
+          </h2>
+          <p class="text-zinc-400 text-base md:text-lg font-light leading-relaxed mb-6">
+            Soy un apasionado de los detalles. Creo firmemente que un gran sitio web no solo debe verse espectacular, sino que debe funcionar de manera impecable y cargar en milisegundos. Me especializo en traducir ideas complejas en experiencias web interactivas limpias y de alta conversión.
+          </p>
+        </div>
+
+        <!-- Interactive Tabs Component -->
+        <div class="w-full">
+          <!-- Tab Headers -->
+          <div class="flex border-b border-white/5 gap-2 mb-6">
+            <button
+              id="tab-btn-enfoque"
+              class="tab-btn active relative px-4 py-2.5 font-heading text-sm font-semibold text-white transition-all duration-300 focus:outline-none cursor-pointer"
+            >
+              Mi Enfoque
+              <span class="tab-indicator absolute bottom-0 left-0 w-full h-[2px] bg-blue-300 transition-all duration-300"></span>
+            </button>
+            <button
+              id="tab-btn-historia"
+              class="tab-btn relative px-4 py-2.5 font-heading text-sm font-semibold text-zinc-500 hover:text-white transition-all duration-300 focus:outline-none cursor-pointer"
+            >
+              Mi Historia
+              <span class="tab-indicator absolute bottom-0 left-0 w-0 h-[2px] bg-blue-300 transition-all duration-300"></span>
+            </button>
+          </div>
+
+          <!-- Tab Contents -->
+          <div class="min-h-[160px]">
+            <!-- Tab 1: Enfoque -->
+            <div id="tab-content-enfoque" class="tab-pane flex flex-col gap-4">
+              <div class="flex gap-4 items-start">
+                <span class="text-blue-300 text-lg mt-0.5">✦</span>
+                <div>
+                  <h4 class="text-white font-semibold text-sm font-heading mb-1">Rendimiento Extremo</h4>
+                  <p class="text-zinc-400 text-sm font-light leading-relaxed">Código limpio y estructurado con frameworks modernos como Astro para maximizar velocidades de carga y SEO.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <span class="text-purple-300 text-lg mt-0.5">✦</span>
+                <div>
+                  <h4 class="text-white font-semibold text-sm font-heading mb-1">Diseño Pixel-Perfect</h4>
+                  <p class="text-zinc-400 text-sm font-light leading-relaxed">Cuidado minucioso en las proporciones, espaciados y micro-interacciones que otorgan un acabado premium.</p>
+                </div>
+              </div>
+              <div class="flex gap-4 items-start">
+                <span class="text-indigo-300 text-lg mt-0.5">✦</span>
+                <div>
+                  <h4 class="text-white font-semibold text-sm font-heading mb-1">Escalabilidad y Seguridad</h4>
+                  <p class="text-zinc-400 text-sm font-light leading-relaxed">Desarrollo modular que permite actualizaciones sin fricciones y adaptabilidad en plataformas e-commerce y custom apps.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 2: Historia -->
+            <div id="tab-content-historia" class="tab-pane hidden flex flex-col gap-4">
+              <p class="text-zinc-400 text-sm font-light leading-relaxed">
+                Mi viaje en el desarrollo web comenzó hace más de 4 años, motivado por el deseo de conectar la estética visual con la arquitectura técnica del código. Desde entonces, he colaborado en el lanzamiento de más de 20 proyectos digitales que van desde landing pages minimalistas hasta tiendas en línea de alto tráfico y marketplaces inmobiliarios.
+              </p>
+              <p class="text-zinc-400 text-sm font-light leading-relaxed">
+                Hoy en día me dedico a trabajar de forma independiente con marcas ambiciosas, ayudándoles a definir, diseñar y codificar su identidad en internet, asegurando que destaquen frente a su competencia y maximicen su conversión.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .tab-indicator {
+    transition: width 0.3s ease, left 0.3s ease;
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+  import ScrollTrigger from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.addEventListener("astro:page-load", () => {
+    initAbout();
+  });
+
+  window.addEventListener("DOMContentLoaded", () => {
+    initAbout();
+  });
+
+  function initAbout() {
+    // 1. Tab Interaction Logic
+    const btnEnfoque = document.getElementById("tab-btn-enfoque");
+    const btnHistoria = document.getElementById("tab-btn-historia");
+    
+    const contentEnfoque = document.getElementById("tab-content-enfoque");
+    const contentHistoria = document.getElementById("tab-content-historia");
+
+    if (btnEnfoque && btnHistoria && contentEnfoque && contentHistoria) {
+      btnEnfoque.addEventListener("click", () => {
+        // Active button styles
+        btnEnfoque.classList.add("text-white");
+        btnEnfoque.classList.remove("text-zinc-500");
+        btnEnfoque.querySelector(".tab-indicator")?.classList.add("w-full");
+        btnEnfoque.querySelector(".tab-indicator")?.classList.remove("w-0");
+
+        btnHistoria.classList.remove("text-white");
+        btnHistoria.classList.add("text-zinc-500");
+        btnHistoria.querySelector(".tab-indicator")?.classList.remove("w-full");
+        btnHistoria.querySelector(".tab-indicator")?.classList.add("w-0");
+
+        // Swap Content
+        contentHistoria.classList.add("hidden");
+        contentEnfoque.classList.remove("hidden");
+        
+        // GSAP fade in content
+        gsap.fromTo(contentEnfoque, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 });
+      });
+
+      btnHistoria.addEventListener("click", () => {
+        // Active button styles
+        btnHistoria.classList.add("text-white");
+        btnHistoria.classList.remove("text-zinc-500");
+        btnHistoria.querySelector(".tab-indicator")?.classList.add("w-full");
+        btnHistoria.querySelector(".tab-indicator")?.classList.remove("w-0");
+
+        btnEnfoque.classList.remove("text-white");
+        btnEnfoque.classList.add("text-zinc-500");
+        btnEnfoque.querySelector(".tab-indicator")?.classList.remove("w-full");
+        btnEnfoque.querySelector(".tab-indicator")?.classList.add("w-0");
+
+        // Swap Content
+        contentEnfoque.classList.add("hidden");
+        contentHistoria.classList.remove("hidden");
+
+        // GSAP fade in content
+        gsap.fromTo(contentHistoria, { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 });
+      });
+    }
+
+    // 2. Entrance Scroll Animations
+    gsap.to(".about-left", {
+      scrollTrigger: {
+        trigger: "#sobre-mi",
+        start: "top 80%",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+    });
+
+    gsap.to(".about-right", {
+      scrollTrigger: {
+        trigger: "#sobre-mi",
+        start: "top 80%",
+      },
+      x: 0,
+      opacity: 1,
+      duration: 1,
+      ease: "power3.out",
+      delay: 0.15,
+    });
+  }
+</script>

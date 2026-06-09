@@ -1,0 +1,65 @@
+<div
+  class="fixed top-0 left-0 w-full min-h-screen bg-[#0D0D11] overflow-hidden text-white -z-10"
+>
+  <!-- Capa de ruido -->
+  <div class="absolute inset-0 bg-noise z-0 w-full h-full"></div>
+
+  <!-- Blobs animados -->
+  <div class="absolute inset-0 z-0">
+    <div class="blob bg1"></div>
+    <div class="blob bg2"></div>
+    <div class="blob bg3"></div>
+  </div>
+</div>
+
+<style>
+  .blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    opacity: 0.35;
+    filter: blur(120px);
+    mix-blend-mode: overlay;
+  }
+
+  .bg1 {
+    background: #002746;
+    top: 40%;
+    left: 10%;
+  }
+  .bg2 {
+    background: #6da8d4;
+    top: 20%;
+    left: 50%;
+  }
+  .bg3 {
+    background: #0a456f;
+    top: 60%;
+    left: 70%;
+  }
+</style>
+
+<script>
+  import gsap from "gsap";
+
+  const blobs = document.querySelectorAll(".blob");
+
+  blobs.forEach((blob) => {
+    function animateBlob() {
+      gsap.to(blob, {
+        duration: gsap.utils.random(3, 7),
+        x: gsap.utils.random(-200, 200),
+        y: gsap.utils.random(-200, 200),
+        scale: gsap.utils.random(0.8, 1.5),
+        width: gsap.utils.random(200, 500),
+        height: gsap.utils.random(200, 500),
+        borderRadius: `${gsap.utils.random(40, 70)}% ${gsap.utils.random(50, 80)}% ${gsap.utils.random(60, 90)}% ${gsap.utils.random(40, 70)}% / 
+                 ${gsap.utils.random(50, 80)}% ${gsap.utils.random(60, 90)}% ${gsap.utils.random(40, 70)}% ${gsap.utils.random(60, 90)}%`,
+        ease: "sine.inOut",
+        onComplete: animateBlob,
+      });
+    }
+    animateBlob();
+  });
+</script>
