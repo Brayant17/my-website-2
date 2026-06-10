@@ -67,7 +67,8 @@
           
           <h3 class="text-2xl font-bold font-heading text-white mb-6">Enviar Mensaje</h3>
           
-          <form id="contact-form" class="flex flex-col gap-6">
+          <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="flex flex-col gap-6">
+            <input type="hidden" name="access_key" value="ab149c70-d66a-48d9-ab59-4397fd8a8909">
             
             <!-- Name Input -->
             <div class="flex flex-col gap-2 relative">
@@ -75,6 +76,7 @@
               <input
                 type="text"
                 id="name"
+                name="name"
                 required
                 placeholder="Ej. Juan Pérez"
                 class="w-full bg-white/2 border border-white/5 focus:border-blue-300/40 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-blue-300/20 transition-all duration-300"
@@ -87,6 +89,7 @@
               <input
                 type="email"
                 id="email"
+                name="email"
                 required
                 placeholder="juan@correo.com"
                 class="w-full bg-white/2 border border-white/5 focus:border-blue-300/40 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-blue-300/20 transition-all duration-300"
@@ -100,6 +103,7 @@
                 id="message"
                 required
                 rows="4"
+                name="message"
                 placeholder="Cuéntame sobre tu proyecto..."
                 class="w-full bg-white/2 border border-white/5 focus:border-blue-300/40 rounded-xl px-4 py-3 text-sm text-white placeholder-zinc-600 focus:outline-none focus:ring-1 focus:ring-blue-300/20 transition-all duration-300 resize-none"
               ></textarea>
